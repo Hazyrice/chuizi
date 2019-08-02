@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>锤子移动端</title>
+    <link rel="stylesheet" href="css/main-2.css">
+</head>
+<body>
+    <div class="mo">
+        <div class="nav">
+            <a href="">
+                <div class="nav-s-1">
+
+                </div>
+            </a>
+            <a href="https://www.smartisan.com/" title="" class="nav-s">
+                <img src="src/logo.png" alt="" width="23px" height="23px">
+            </a>
+            <a href="#" title="" class="nav-s">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyN0JBQ0NFNTQ2QTIxMUU4OTc5MjlEODQyOERGRDZCMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyN0JBQ0NFNjQ2QTIxMUU4OTc5MjlEODQyOERGRDZCMiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjI3QkFDQ0UzNDZBMjExRTg5NzkyOUQ4NDI4REZENkIyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI3QkFDQ0U0NDZBMjExRTg5NzkyOUQ4NDI4REZENkIyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ncNiIgAAA9FJREFUeNrMmVlIVGEUx++MQ7agldkuSlGR0UNQtphBe7RHVNRU5pIPvfRQFNVjYRRRFEkRlGGrVj5lD0EpYoYttkEZBoU1ZJYYlGXbaP9DR5iGOd9d5t7L/OGH8p259/7nu99yvjOepqYmzYJGgflgGkgHaSAB+MAX8AG8BA9BJbgPOjWb5DFhuifYBArARJPPeQvOg+OgxQ3THpAH9oGhUT6vAxSBvaDdKdOp4CLI0uwV9Xw2qLZysVcRmwUeOWC4uzNug21WLvYJ7StAKYg3eJ+PzC+QDIaDOJ1rKH4YDAE7ozU9G5SBHorrfoByhl5xW1icrs0Ay4AfpCjutYOvP2B1TKfxkEgSPk/L1imelM0Gn0FfIAcU8luIpC6wBlwza9rLvSaN4XdgPaixOI4H8rK3QIh/BuPBezMTMV9h+AVvJDVRTL5PYDEoFuL9wVEzPd0LvOZJEa4AGw7YtHJ4eRldK8QngXojPZ0rGA7yzQM2LnedvKs2CvHdRodHgRA/CWodWKdpN9wixJbr7bxkeiyYIGy5hZpzquQNJtIyvErP9FwhVs7ZmpM6IbTP0zOdqTDttG7wGw3XVD3T6UKs2gXTP0GdsKYnq0ynRmhv4cXeDTUI7cNUphOEBMgttQrtiSrTccJa6pZ+Kw4foumvZr6lA+qnWMtF081Ckh7vkunRilxFNN0oJOgZLhimITAlQvs3Vbbn5eN9JC1xwfRkMDhCe71qXpHpKiGWrXN6sUP5Qvstvc2ljhP8cFHSstlBw6ncMZFUpmeaXkOJEKf6xCCHTBcJk/2uIm39LzUtEnKAAeCCgZO1WW0FS4XYQaP5dIviqEMZ12kbjVPaeUSI3QPXzZwR9wOp3JTDWV+iDT1cKnRAkA8GXWZM0w60gS+WThRPwCILZkeCCnBM8caol58ZPWSG6g7Ypfj8CM6Ba7kI00fn3ll8+m7gk7hKmUaHoVSApGPWHoPJDm0Ez0Oytd5gDO+oSRbeSgmv30GzpknbwSFVtuWglMZVVVMqDi5UJS5R6A94oIhT8f6MNFS8Oje/CcaBs0ZmtUHVckFmuqau3YnGvQYeQmM1j8sMl/lcZ1ZdfOakEvIM8JTng9+A8eJw4x4LPxT1BSvBHO6tNGHct3IGWcVr/Bvhfj7uDFWt4xx3XNCq6XBRHTAlZOPp4HpJm4l7kPFLYLXiM1RxpfJd0GfDGCWTr2yYmH7+XzK+kf/m+rTYkVHjrXYMD7sVx2NcMt7u1WJPNNnWgatC/HEsmg41fiWsnQr//lg13W2cxjhVVr9r/346mQkCfwUYACzE4s6QiHG6AAAAAElFTkSuQmCC" alt="" width="23px" height="23px">
+            </a>
+        </div>
+        <div class="sec">
+            <div class="sec-img">
+                
+            </div>
+        </div>
+        <div class="thr">
+            <div>
+                <a href="" class="font-a"> 
+                    <div class="font-top">
+                        <div class="top-t">热销商品</div>
+                        <div class="dayu">></div>
+                    </div>
+                </a>
+                <div class="thr-body">
+                    <div class="body-s-1 float">
+                        <a href="">
+                            <div class="s-1-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">Smartisan 帆...</div>
+                            <div class="sty-a2">一双踏实的、舒适的...</div>
+                            <div class="sty-a3">¥ 199.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-2 float">
+                        <a href="">
+                            <div class="s-2-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">坚果 QuickCha...</div>
+                            <div class="sty-a2">全面兼容的 18W 快...</div>
+                            <div class="sty-a3">¥ 59.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-3 float">
+                        <a href="">
+                            <div class="s-3-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">各色DNA检测...</div>
+                            <div class="sty-a2">千万级基因位点数...</div>
+                            <div class="sty-a3">¥ 499.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-4 float">
+                        <a href="">
+                            <div class="s-4-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">Smartisan T恤...</div>
+                            <span class="blank" style="height:10px;"></span>
+                            <div class="sty-a3">¥ 149.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-5 float">
+                        <a href="">
+                            <div class="s-5-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">Smartisan 快...</div>
+                            <div class="sty-a2">10000mAh 双向快...</div>
+                            <div class="sty-a3">¥ 129.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-6 float">
+                        <a href="">
+                            <div class="s-6-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">坚果“电池形电...</div>
+                            <div class="sty-a2">别具一格的“全能型”...</div>
+                            <div class="sty-a3">¥ 69.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-7 float">
+                        <a href="">
+                            <div class="s-7-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">Smartisan 半...</div>
+                            <div class="sty-a2">经典配色、专业调...</div>
+                            <div class="sty-a3">¥ 59.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-8 float">
+                        <a href="">
+                            <div class="s-8-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">坚果砖式蓝牙小...</div>
+                            <div class="sty-a2">一款设计出色、音...</div>
+                            <div class="sty-a3">¥ 149.00</div>
+                        </div>
+                    </div>
+                    <div class="body-s-9 float">
+                        <a href="">
+                            <div class="s-9-img img-all">
+                            
+                            </div>
+                        </a>
+                        <div class="s-font tiao">
+                            <div class="sty-a1">Smartisan 原...</div>
+                            <div class="sty-a2">18W安全快充...</div>
+                            <div class="sty-a3">¥ 49.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fou">
+            <div>
+                <a href="" class="font-a"> 
+                <div class="font-top">
+                    <div class="top-t">服饰箱包</div>
+                    <div class="dayu">></div>
+                </div>
+                </a>
+                <a href="" class="font-a">
+                    <div class="fou-box">
+                    <div class="fou-pic f-pic-1">
+
+                    </div>
+                    <div class="">
+                        <div class="sty-f1">地平线8号旅行箱</div>
+                        <div class="sty-f2">简约设计、德国拜耳PC箱体</div>
+                        <div>
+                            <div class="zuhe">
+                                <div class="dian"></div>
+                            </div>
+                        </div>
+                        <div class="sty-f4">¥ 299.00</div>
+                    </div>
+                    </div>
+                </a>
+                <a href="" class="font-a">
+                    <div class="fou-box">
+                    <div class="fou-pic f-pic-2">
+                        
+                    </div>
+                    <div class="">
+                        <div class="sty-f1">Smartisan T恤 皇帝的新装</div>
+                        <div class="sty-f2">框</div>
+                        <div>
+                            <div class="zuhe">
+                                <div class="dian"></div>
+                            </div>
+                        </div>
+                        <div class="sty-f4">¥ 149.00</div>
+                    </div>
+                    </div>
+                </a>
+                <a href="" class="font-a">
+                <div class="fou-box">
+                    <div class="fou-pic f-pic-3">
+                        
+                    </div>
+                    <div class="">
+                        <div class="sty-f1">地平线8号商务旅行箱</div>
+                        <div class="sty-f2">为了野心和远方</div>
+                        <div>
+                            <div class="zuhe">
+                                <div class="dian"></div>
+                            </div>
+                        </div>
+                        <div class="sty-f4">¥ 999.00</div>
+                    </div>
+                </div>
+                </a>
+                <a href="" class="font-a">
+                <div class="fou-box">
+                    <div class="fou-pic f-pic-4">
+                        
+                    </div>
+                    <div class="">
+                        <div class="sty-f1">Smartisan T恤 红白机</div>
+                        <div class="sty-f2">框</div>
+                        <div>
+                            <div class="zuhe">
+                                <div class="dian"></div>
+                            </div>
+                        </div>
+                        <div class="sty-f4">¥ 149.00</div>
+                    </div>
+                </div>
+                </a>
+                <a href="" class="font-a">
+                <div class="fou-box">
+                    <div class="fou-pic f-pic-5">
+                        
+                    </div>
+                    <div class="">
+                        <div class="sty-f1">Smartisan T恤 丑小鸭</div>
+                        <div class="sty-f2">框</div>
+                        <div>
+                            <div class="zuhe">
+                                <div class="dian"></div>
+                            </div>
+                        </div>
+                        <div class="sty-f4">¥ 149.00</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="fiv">
+            <div>
+                <a href="" class="font-a"> 
+                <div class="font-top">
+                    <div class="top-t">畅呼吸</div>
+                    <div class="dayu">></div>
+                </div>
+                </a>
+                <div class="fiv-body">
+                    <div class="fiv-box">
+                        <a href="">
+                        <div class="fiv-pic fv-pic-1">
+                            
+                        </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">畅呼吸智能空气进化器·...</div>
+                            <div class="sty-a2">超强净化能力、超低噪音、超...</div>
+                            <div class="sty-a3">¥ 2799.00</div>
+                        </div>
+                    </div>
+                    <div class="fiv-box">
+                        <a href="">
+                            <div class="fiv-pic fv-pic-2">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao"> 
+                            <div class="sty-a1">畅呼吸智能空气进化器·...</div>
+                            <div class="sty-a2">超强除甲醛能力，超低噪音，...</div>
+                            <div class="sty-a3">¥ 2999.00</div>
+                        </div>
+                    </div>
+                    <div class="fiv-box">
+                        <a href="">
+                             <div class="fiv-pic fv-pic-3">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">畅呼吸除霾除甲醛高效...</div>
+                            <div class="sty-a2">精选双层材质、过滤更精...</div>
+                            <div class="sty-a3">¥ 699.00</div>
+                        </div>
+                    </div>
+                    <div class="fiv-box">
+                        <a href="">
+                            <div class="fiv-pic fv-pic-4">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">畅呼吸除甲醛超级活性...</div>
+                            <div class="sty-a2">家装等场景适用的专业除甲醛..</div>
+                            <div class="sty-a3">¥ 599.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="six">
+            <div>
+                <a href="" class="font-a"> 
+                <div class="font-top">
+                    <div class="top-t">官方配件</div>
+                    <div class="dayu">></div>
+                </div>
+                </a>
+                <div class="six-body">
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-1">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">Smartisan 双口 & 快充...</div>
+                            <div class="sty-a2">铝合金机身、双口 & 快充、...</div>
+                            <div class="sty-a3">¥ 79.00</div>
+                        </div>
+                    </div>
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-2">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果“电池形电池”移动...</div>
+                            <div class="sty-a2">别具一格的“全能型”移动电源</div>
+                            <div class="sty-a3">¥ 59.00</div>
+                        </div>
+                    </div>
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-3">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">Smartisan 半入耳式耳机</div>
+                            <div class="sty-a2">经典配色、专业调音、高品质...</div>
+                            <div class="sty-a3">¥ 59.00</div>
+                        </div>
+                    </div>
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-4">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果彩虹数据线</div>
+                            <div class="sty-a2">七彩配色随机发货，为生活增...</div>
+                            <div class="sty-a3">¥ 19.00</div>
+                        </div>
+                    </div>
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-5">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果砖式蓝牙小音箱</div>
+                            <div class="sty-a2">一款设计出色、音质出众的随...</div>
+                            <div class="sty-a3">¥ 149.00</div>
+                        </div>
+                    </div>
+                    <div class="six-box">
+                        <a href="">
+                            <div class="six-pic six-pic-6">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">Smartisan 快充移动电...</div>
+                            <div class="sty-a2">10000mAh 双向快充、轻盈...</div>
+                            <div class="sty-a3">¥ 129.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sev">
+            <div>
+                <a href="" class="font-a"> 
+                <div class="font-top">
+                    <div class="top-t">坚果系列手机及配件</div>
+                    <div class="dayu">></div>
+                </div>
+                </a>
+                <div class="sev-body">
+                    <div class="sev-box">
+                        <a href="">
+                            <div class="sev-pic sev-pic-1">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果 Pro 2S</div>
+                            <div class="sty-a2">双系统 ，无限屏</div>
+                            <div class="sty-a3">¥ 1998.00</div>
+                        </div>
+                    </div>
+                    <div class="sev-box">
+                        <a href="">
+                           <div class="sev-pic sev-pic-2">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果 Pro 2S</div>
+                            <div class="sty-a2">双系统 ，无限屏</div>
+                            <div class="sty-a3">¥ 1998.00</div>
+                        </div>
+                    </div>
+                    <div class="sev-box">
+                        <a href="">
+                            <div class="sev-pic sev-pic-3">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">Smartisan 原装快充充...</div>
+                            <div class="sty-a2">18W 安全快充</div>
+                            <div class="sty-a3">¥ 49.00</div>
+                        </div>
+                    </div>
+                    <div class="sev-box">
+                        <a href="">
+                            <div class="sev-pic sev-pic-4">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果 Type-C To Type-C...</div>
+                            <div class="sty-a2">TPE 环保材质，PTC过温保护</div>
+                            <div class="sty-a3">¥ 39.00</div>
+                        </div>
+                    </div>
+                    <div class="sev-box">
+                        <a href="">
+                            <div class="sev-pic sev-pic-5">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">Smartisan 耳机转接头</div>
+                            <div class="sty-a2">即插即用、全面兼容</div>
+                            <div class="sty-a3">¥ 19.00</div>
+                        </div>
+                    </div>
+                    <div class="sev-box">
+                        <a href="">
+                            <div class="sev-pic sev-pic-6">
+                            
+                            </div>
+                        </a>
+                        <div class="tiao">
+                            <div class="sty-a1">坚果“电池形电池”移动...</div>
+                            <div class="sty-a2">别具一格的“全能型”移动电源</div>
+                            <div class="sty-a3">¥ 69.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="blank" style="height:70px;"></span>
+        <div class="foot">
+            <div class="foot-box">
+                <a href="" class="a-style">
+                    <div class="foot-1">
+
+                    </div>
+                    <div class="foot-font">
+                        首页
+                    </div>
+                </a>
+            </div>
+           
+            <div class="foot-box">
+                <a href="" class="a-style">
+                    <div class="foot-2">
+
+                    </div>
+                    <div class="foot-font">
+                        分类
+                    </div>
+                </a>
+            </div>
+            <div class="foot-box">
+                <a href="" class="a-style">
+                    <div class="foot-3">
+
+                    </div>
+                    <div class="foot-font">
+                        购物车
+                    </div>
+                </a>
+            </div>
+            <div class="foot-box">
+                <a href="" class="a-style">
+                    <div class="foot-4">
+
+                    </div>
+                    <div class="foot-font">
+                        个人中心
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="hongbao">
+            
+        </div>
+    </div>
+</body>
+</html>
